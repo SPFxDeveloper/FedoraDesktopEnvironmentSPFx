@@ -5,10 +5,13 @@
 #Antes de ejecutar el siguiente archivo deberá dar los permisos necesarios al mismo desde una terminal
 
 #Si requieres dar permisos de ejecución del script al usuario actual
-#sudo chmod 775 configureFedora.sh
+#sudo chmod 775 Install01.sh
 
 #Si requieres dar permisos de ejecución del script a todos los usuarios
-#sudo chmod 777 configureFedora.sh
+#sudo chmod 777 Install01.sh
+
+#Ejecución del archivo
+#sh ./Install01.sh
 
 #/*Remover aplicaciones que no se ocuparán*/
 read -t 1 -p "Remove apps ..."
