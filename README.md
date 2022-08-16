@@ -32,4 +32,8 @@ Lee y ejecuta el archivo Install01.sh
 Lee y ejecuta el archivo Install02.sh
 Lee y realiza las acciones marcadas dentro del archivo CustomFedora.txt
 
-Observa la imagen FedoraDesktop.png, será el ambiente de trabajo a generar.
+Observa la imagen Fedora Desktop 01.png y Fedora Desktop 02.png, será el ambiente de trabajo a generar.
+
+![alt text](https://github.com/SPFxDeveloper/FedoraDesktopEnvironmentSPFx/blob/main/Fedora%20Desktop%2001.png?raw=true)
+![alt text](https://github.com/SPFxDeveloper/FedoraDesktopEnvironmentSPFx/blob/main/Fedora%20Desktop%2002.png?raw=true)
+
