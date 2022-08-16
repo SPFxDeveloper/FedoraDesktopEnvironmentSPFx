@@ -1,0 +1,7 @@
+Ejemplo de como crear una solución de SPFx
+
+Para la versión de SPFx 1.13.1
+nvm use v14.19.3 && yo @microsoft/sharepoint --skip-install
+
+Para la versión de SPFx 1.15.2
+nvm use v16.16.0 && yo @microsoft/sharepoint --skip-install
