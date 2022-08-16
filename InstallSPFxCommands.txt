@@ -1,0 +1,23 @@
+SPFx 1.19.1
+nvm install v10.16.3 && nvm use v10.16.3 && npm install gulp@3.9.1 gulp-cli yo@3.1.1 @microsoft/generator-sharepoint@1.9.1 --global
+nvm use v10.16.3 && nvm current && npm ls -g --depth=0
+
+SPFx 1.11
+nvm install v10.24.1 && nvm use v10.24.1 && npm install gulp gulp-cli yo@3.1.1 @microsoft/generator-sharepoint@1.11.0 --global
+nvm use v10.24.1 && nvm current && npm ls -g --depth=0
+
+SPFx 1.12.1
+nvm install v12.22.12 && nvm use v12.22.12 && npm install gulp gulp-cli yo @microsoft/generator-sharepoint@1.12.1 --global
+nvm use v12.22.12 && nvm current && npm ls -g --depth=0
+
+SPFx 1.13.1
+nvm install v14.19.3 && nvm use v14.19.3 && npm install gulp gulp-cli yo @microsoft/generator-sharepoint@1.13.1 --global
+nvm use v14.19.3 && nvm current && npm ls -g --depth=0
+
+SPFx 1.14
+nvm install v14.20.0 && nvm use v14.20.0 && npm install gulp gulp-cli yo @microsoft/generator-sharepoint@1.14 --global
+nvm use v14.20.0 && nvm current && npm ls -g --depth=0
+
+SPFx 1.15.2
+nvm install v16.16.0 && nvm use v16.16.0 && npm install gulp-cli yo @microsoft/generator-sharepoint@1.15.2 --global
+nvm use v16.16.0 && nvm current && npm ls -g --depth=0
