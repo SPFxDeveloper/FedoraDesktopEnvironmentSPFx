@@ -73,10 +73,51 @@ read -t 5 -p "I am going to wait for 5 seconds only ..."
 
 #/*Download and install azure data studio*/
 read -t 1 -p "Download and install azure data studio ..."
-cd Downloads/
+cd ~ && cd Downloads/
 wget https://sqlopsbuilds.azureedge.net/stable/dff93c4736269ef2a7e8a225737a0d8354bf0246/azuredatastudio-linux-1.38.0.rpm
 sudo dnf install -y ./azuredatastudio-linux-1.38.0.rpm
 rm -rf azuredatastudio-linux-1.38.0.rpm
+
+read -t 5 -p "I am going to wait for 5 seconds only ..."
+
+#/*Download and install Insomnia*/
+read -t 1 -p "Download and install Insomnia ..."
+cd ~ && cd Downloads/
+wget https://github.com/Kong/insomnia/releases/download/core%402022.4.2/Insomnia.Core-2022.4.2.rpm
+sudo dnf install -y ./Insomnia.Core-2022.4.2.rpm
+rm -rf Insomnia.Core-2022.4.2.rpm
+
+read -t 5 -p "I am going to wait for 5 seconds only ..."
+
+#/*Download and install Postman*/
+read -t 1 -p "Download and install Postman ..."
+cd ~ && cd Downloads/
+wget -O postman-linux-x64.tar.gz https://dl.pstmn.io/download/latest/linux64 
+tar -xzvf Postman-linux-x86_64-8.11.1.tar.gz
+sudo mv Postman /opt
+sudo ln -s /opt/Postman/Postman /usr/local/bin/postman
+rm -rf postman-linux-x64.tar.gz
+
+cat >> /usr/share/applications/postman.desktop << EOT
+
+[Desktop Entry]
+Type=Application
+Name=Postman REST Client
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Exec="/opt/Postman/Postman"
+Comment=Postman REST Client Desktop App
+Categories=Development;Code;Testing;
+
+EOT
+
+read -t 5 -p "I am going to wait for 5 seconds only ..."
+
+#/*Download and install Figma*/
+read -t 1 -p "Download and install Figma ..."
+cd ~ && cd Downloads/
+wget https://github.com/Figma-Linux/figma-linux/releases/download/v0.10.0/figma-linux_0.10.0_linux_x86_64.rpm
+sudo dnf install -y ./figma-linux_0.10.0_linux_x86_64.rpm
+rm -rf figma-linux_0.10.0_linux_x86_64.rpm
 
 read -t 5 -p "I am going to wait for 5 seconds only ..."
 
