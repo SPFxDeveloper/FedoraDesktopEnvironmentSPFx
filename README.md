@@ -25,3 +25,11 @@ https://nodejs.org/en/
 https://github.com/nvm-sh/nvm
 https://citizix.com/step-by-step-install-postman-rest-client-in-fedora-34/
 https://github.com/Figma-Linux/figma-linux
+
+Después de instalar Fedora por primera vez:
+
+Lee y ejecuta el archivo Install01.sh
+Lee y ejecuta el archivo Install02.sh
+Lee y realiza las acciones marcadas dentro del archivo CustomFedora.txt
+
+Observa la imagen FedoraDesktop.png, será el ambiente de trabajo a generar.
