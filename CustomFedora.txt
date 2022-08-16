@@ -122,8 +122,6 @@ Eso abrirá una terminal
 
 plank --preferences
 
-sudo dnf install adapta-gtk-theme-plank elementary-theme-plank arc-theme-plank
-
 Si no se ve la ventana mueve la terminal, seguro se quedó detrás.
 
 En Appearence
@@ -220,3 +218,11 @@ En VS Code
     "terminal.integrated.gpuAcceleration": "off",
     "window.restoreWindows": "none"
 }
+
+Si hay alguna aplicación que no hayas podido agregar, búscala en el menú de aplicaciones y anclala o bien abre un explorar de archivos y ve a la ruta:
+
+-/usr/share/applications
+
+Busca la aplciación que necesitas y arrastrala al Dock
+
+
