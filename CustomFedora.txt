@@ -1,0 +1,222 @@
+/*Cambiar la pantalla de inicio de sesión*/
+Al iniciar la máquina no inciar sesión y presionar la combinación de teclas
+ALT + CTRL + F3
+
+autenticarse con el usuario root e ingresar la contraseña
+
+systemctl disable sddm.service
+sudo systemctl enable lightdm
+systemctl set-default graphical.target
+reboot
+
+
+/*Mostrar mayor detalle al iniciar el sistema operativo y quitar el tiempo de espera*/
+
+sudo nano /etc/default/grub
+en la línea: grub_cmdline_linux
+remover quiet y timeout
+
+Guardar cambios con CTRL + O y después aplicarlos con CTRL + X
+
+Ejecutar la actualización de GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+Si no dejara ejecutar la línea anterior probar con la siguiente:
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+Reiniciar
+
+/*Configuración de aplicaciones*/
+
+Abrir la terminal ir al menú File -> Preferences
+Color Scheme: GreenOnBlack
+Fixed Tab Width: 200px
+
+Cerrar la aplicación
+
+Abrir PCManFM ir al menu Edit -> Preferences
+Ir a la sección Advanced
+Terminal Emulator: qterminal
+
+Cerrar la aplicación
+
+Abrir FeatherPad ir al menú Options -> Preferences
+En Window
+Activar Remember window position on closing
+En Text
+Activar Always show line numbers
+Activar Dark Color scheme
+Text Tab Size: 2
+
+Cerrar la aplicación
+
+/*Configuraciones del SO*/
+
+En la terminal ejecutar el comando
+lxqt-config
+
+Abrir Appearence y hacer clic en:
+Window: Seleccionar color negro a un 80 o 90%, o colocar el siguiente color: #303030
+View: Seleccionar negro al 100%, o colocar #000000
+Window Text: #ffffff
+View Text: #ffffff
+
+Aplicar cambios
+
+En Icons Theme seleccionar los iconos que más te gusten y aplicar cambio, el tema Sea tiene iconos que resaltan.
+
+En LXQT Theme puedes elegir Dark y aplicarlo o el que más te guste
+
+En Cursor elegir bloom-dark y aplicarlo o el que más te guste
+
+Cerrar
+
+Abrir Openbox Settings
+
+Theme: Seleccionar Mistral-Thin o el que más te guste
+Appearence: Desactivar Animate iconify and restore
+Desktop: Number of desktop ponerlo a 1, o si te gusta manejar diferentes escritorios dejarlo en el número que gustes
+
+Abrir Power Management
+
+Battery: desactivar Enable Battery...
+Idle: Desactivar Enable Idleness...
+
+Abrir Session Settings
+
+En Basic Settings: Desactivar Panel y Power Management
+En Autostart: Desactivar Liveinst Setup, dnfdragora-updater y XScreenSaver
+	Seleccionar XScreenSaver y presionar el botón Add
+	En Name: Plank
+        Command: plank
+        Volver a presionar Add
+	En Name: Picom
+        Command: picom
+
+Abrir Users and Groups
+	Ir a Groups
+	Abrir on doble clic vboxsf
+	Seleccionar tu usuario
+
+Abrir File Associations
+	Ir a Default Applications
+	Cambiar el File Manager por PCManFM
+	Ir a Associations
+	En la caja de texto escribe txt, en el cuadro de abajo despliega text y selecciona plain
+	Cambialo por FeatherPad
+
+Abrir LightDM GTK+ ...
+	En Appearence
+	Theme: Adwaita-dark
+	Icons: Sea
+	Si quieres cambiar la imagen puedes hacerlo, es la que aparece de fondo al ingresar tu usuario y contraseña
+	Si quieres mover la posición adelante, lo demás no lo he movido, así que bajo tu propio riesgo
+
+Reincia el equipo, basta con cerrar sesión, pero prefiero reiniciar por cualquier cosa.
+Ya tienes una base para mover un poco de estilo y dejarlo a tu gusto.
+
+Al entrar ya todo habrá cambiado.
+
+Presiona ALT + CTRL + T
+
+Eso abrirá una terminal
+
+plank --preferences
+
+sudo dnf install adapta-gtk-theme-plank elementary-theme-plank arc-theme-plank
+
+Si no se ve la ventana mueve la terminal, seguro se quedó detrás.
+
+En Appearence
+Theme: Transparent
+Icon Size: 34
+
+En Behavior
+Desactivar Hide Dock
+
+En Docklets
+Doble clic en Applications, Clock, CPU Monitor, Trash
+
+Cerrar y cerrar consola
+
+Si arrastras un icono fuera del Dock verás que lo eliminas
+
+En el icono de aplicaciones presiona botón derecho del mouse y abre las aplicaciones que necesites
+
+Al estar en el Dock solo dales botón derecho y selecciona Keep in Dock o bien solo arrastralas para acomodarlas dentro del dock y con eso se quedarán ancladas
+
+En el icono de aplicaciones, da clic con el botón derecho y selecciona la opción Leave, en el dock verás que sale un icono de swith o apagador de pared, ancla ese icono
+
+En la configuración de sesión puedes desactivar la opción de confirmación para que ya no tengas que confirmar el apagado del equipo.
+
+Editar el archivo /usr/share/themes/Mistral-Thin/openbox-3/themerc
+border.width: 2
+window.handle.width: 4
+
+Editar el archivo 
+
+<keybind key="Super-Left">
+	<action name="UnmaximizeFull"/>
+	<action name="MoveResizeTo">
+		<width>50%</width>
+		<height>100%</height>
+		<x>0%</x>
+		<y>0%</y>
+	</action>
+</keybind>
+<keybind key="Super-Right">
+	<action name="UnmaximizeFull"/>
+	<action name="MoveResizeTo">
+		<width>50%</width>
+		<height>100%</height>
+		<x>50%</x>
+		<y>0%</y>
+	</action>
+</keybind>
+<keybind key="Super-Down">
+	<action name="UnmaximizeFull"/>
+	<action name="MoveResizeTo">
+		<width>100%</width>
+		<height>50%</height>
+		<x>0%</x>
+		<y>50%</y>
+	</action>
+</keybind>
+<keybind key="Super-Up">
+	<action name="UnmaximizeFull"/>
+	<action name="MoveResizeTo">
+		<width>100%</width>
+		<height>50%</height>
+		<x>0%</x>
+		<y>0%</y>
+	</action>
+</keybind>
+<keybind key="C-Super-Up">
+	<action name="Maximize"/>
+</keybind>
+<keybind key="A-F7">
+	<action name="Move"/>
+</keybind>
+
+Después ejecutar en la consola:
+openbox --reconfigure
+
+En VS Code
+
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.files.saveFiles"
+  }
+]
+
+//Settings User
+{
+    "workbench.colorTheme": "Default Dark+",
+    "telemetry.telemetryLevel": "off",
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "window.newWindowDimensions": "maximized",
+    "terminal.integrated.gpuAcceleration": "off",
+    "window.restoreWindows": "none"
+}
