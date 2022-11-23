@@ -1,11 +1,11 @@
 # FedoraDesktopEnvironmentSPFx
 Fedora Desktop Environment for SPFx
 
-Creación de un ambiente virtual con Fedora LXQt para el desarrollo de SharePoint Framework
+Creación de un ambiente virtual con Fedora LXQt 37 para el desarrollo de SharePoint Framework en diferentes versiones
 
-Primeramente descarga VirtualBox, el Extension Pack de VirtualBox y Fedora LXQt.
+Primeramente descarga Fedora LXQt, VirtualBox y su Extension Pack.
 
-Instala VirtualBox  y posteriormente crea la máquina virtual de Fedora LXQt.
+Instala VirtualBox y añade el extension pack, posteriormente crea la máquina virtual de Fedora LXQt.
 
 Las páginas de las herramientas a descargar o tutoriales a leer son:
 
@@ -18,13 +18,14 @@ Las páginas de las herramientas a descargar o tutoriales a leer son:
 - https://code.visualstudio.com/#alt-downloads
 - https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16
 - https://www.postman.com/downloads/?utm_source=postman-home
-- https://github.com/Kong/insomnia/releases/tag/core@2022.4.2
+- https://github.com/Kong/insomnia/releases/tag/lib@3.6.0
 - https://git-scm.com/download/linux
 - https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview
 - https://nodejs.org/en/
 - https://github.com/nvm-sh/nvm
 - https://citizix.com/step-by-step-install-postman-rest-client-in-fedora-34/
 - https://github.com/Figma-Linux/figma-linux
+- https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
 
 Después de instalar Fedora por primera vez:
 
@@ -33,6 +34,7 @@ Después de instalar Fedora por primera vez:
 - Lee y realiza las acciones marcadas dentro del archivo CustomFedora.txt
 - Lee y realiza las acciones marcadas dentro del archvio InstallSPFxCommands.txt
 - Lee y realiza las acciones marcadas dentro del archivo CreateSolutionSPFx.txt
+- Lee y ejecuta el archivo InstallNet7.sh si requieres .net 7
 
 Observa la imagen Fedora Desktop 01.png y Fedora Desktop 02.png, será el ambiente de trabajo a generar.
 

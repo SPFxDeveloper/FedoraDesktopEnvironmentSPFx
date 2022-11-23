@@ -14,21 +14,21 @@
 #sh ./Install01.sh
 
 #/*Remover aplicaciones que no se ocuparán*/
-read -t 1 -p "Remove apps ..."
+read -t 1 -p "Remove apps ...`echo $'\n> '`"
 sudo dnf remove -y enki falkon transmission-qt
 
-read -t 5 -p "I am going to wait for 5 seconds only ..."
+read -t 5 -p "I am going to wait for 5 seconds only ...`echo $'\n> '`"
 
 #/*Limpia paquetes de que no se usan*/
-read -t 1 -p "Clean packages ..."
+read -t 1 -p "Clean packages ...`echo $'\n> '`"
 sudo dnf clean packages
 
-read -t 5 -p "I am going to wait for 5 seconds only ..."
+read -t 5 -p "I am going to wait for 5 seconds only ...`echo $'\n> '`"
 
 #/*Instala Updates SO*/ (Hacerlo desde una terminal cada 3 dias o una vez a la semana por lo menos)
-read -t 1 -p "Update OS ..."
+read -t 1 -p "Update OS ...`echo $'\n> '`"
 sudo dnf update -y && sudo dnf upgrade -y && sudo dnf clean all
 
-read -t 5 -p "I am going to reboot in 5 seconds ..."
+read -t 5 -p "I am going to reboot in 5 seconds ...`echo $'\n> '`"
 
 sudo reboot

@@ -5,3 +5,6 @@ nvm use v14.19.3 && yo @microsoft/sharepoint --skip-install
 
 Para la versión de SPFx 1.15.2
 nvm use v16.16.0 && yo @microsoft/sharepoint --skip-install
+
+Para la versión de SPFx 1.16.0
+nvm use v16.18.1 && yo @microsoft/sharepoint --skip-install

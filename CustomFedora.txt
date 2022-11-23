@@ -5,7 +5,7 @@ ALT + CTRL + F3
 autenticarse con el usuario root e ingresar la contraseña
 
 systemctl disable sddm.service
-sudo systemctl enable lightdm
+systemctl enable lightdm
 systemctl set-default graphical.target
 reboot
 
@@ -19,8 +19,6 @@ remover quiet y timeout
 Guardar cambios con CTRL + O y después aplicarlos con CTRL + X
 
 Ejecutar la actualización de GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
-Si no dejara ejecutar la línea anterior probar con la siguiente:
 grub2-mkconfig -o /boot/grub2/grub.cfg
 
 Reiniciar
@@ -146,11 +144,14 @@ En el icono de aplicaciones, da clic con el botón derecho y selecciona la opci�
 
 En la configuración de sesión puedes desactivar la opción de confirmación para que ya no tengas que confirmar el apagado del equipo.
 
-Editar el archivo /usr/share/themes/Mistral-Thin/openbox-3/themerc
+Editar el archivo: /usr/share/themes/Mistral-Thin/openbox-3/themerc
+sudo nano /usr/share/themes/Mistral-Thin/openbox-3/themerc
+
 border.width: 2
 window.handle.width: 4
 
-Editar el archivo 
+Editar el archivo: /home/spfxuser/.config/openbox/rc.xml 
+sudo nano /home/spfxuser/.config/openbox/rc.xml
 
 <keybind key="Super-Left">
 	<action name="UnmaximizeFull"/>
@@ -217,6 +218,27 @@ En VS Code
     "window.newWindowDimensions": "maximized",
     "terminal.integrated.gpuAcceleration": "off",
     "window.restoreWindows": "none"
+}
+
+En Azure Data Studio
+
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.files.saveFiles"
+  }
+]
+
+//Settings User
+{
+    "workbench.editorAssociations": {
+        "*.{sqlplan}": "workbench.editor.executionplan"
+    },
+    "workbench.enablePreviewFeatures": true,
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Default Dark Azure Data Studio",
+    "editor.tabSize": 2
 }
 
 Si hay alguna aplicación que no hayas podido agregar, búscala en el menú de aplicaciones y anclala o bien abre un explorar de archivos y ve a la ruta:
